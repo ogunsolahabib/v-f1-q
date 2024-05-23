@@ -25,7 +25,6 @@ body {
   text-align: center;
   width: 100dvw;
   height: 100%;
-  
 }
 
 
@@ -53,6 +52,7 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
 .container {
   width: 100%;
   max-width: 600px;
@@ -60,12 +60,13 @@ button:focus-visible {
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 2rem;
+  gap: 5rem;
+  box-sizing: border-box;
 }
-.question-area {
-  height: 50dvh;
-}
+
 
 @media screen and (min-width: 720px) {
   h1{
