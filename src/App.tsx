@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './App.css';
+
 
 const defaultArr = [
   'Why you chose US for Masters and not UK',
