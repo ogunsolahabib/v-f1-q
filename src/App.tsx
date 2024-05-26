@@ -17,12 +17,13 @@ const defaultArr = [
   'What would you be doing after your program?',
 ];
 
+
 function Timer({ question }: { question: number }) {
-  const [min, setMin] = useState(3);
+  const [min, setMin] = useState(1);
   const [sec, setSec] = useState(0);
 
   const startTimer = () => {
-    setMin(3);
+    setMin(1);
     setSec(0);
   };
 
@@ -46,7 +47,7 @@ function Timer({ question }: { question: number }) {
   }, [sec, min]);
   return (
     <div
-      className={['timer', +min > 1 ? 'timer--green' : 'timer--red'].join(' ')}
+      className={['timer', +sec > 20 ? 'timer--green' : 'timer--red'].join(' ')}
     >
       {min}:{sec}
     </div>
