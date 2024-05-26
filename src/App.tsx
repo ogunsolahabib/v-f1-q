@@ -16,6 +16,42 @@ const defaultArr = [
   'How big is your company?',
   'What would you be doing after your program?',
 ];
+
+function Timer({ question }: { question: number }) {
+  const [min, setMin] = useState(3);
+  const [sec, setSec] = useState(0);
+
+  const startTimer = () => {
+    setMin(3);
+    setSec(0);
+  };
+
+  useEffect(() => {
+    startTimer();
+  }, [question]);
+
+  useEffect(() => {
+    let timer = setInterval(() => {
+      if (+min === 0 && +sec === 0) return;
+
+      if (+sec === 0) {
+        setSec(59);
+        setMin(min - 1);
+      } else {
+        setSec(sec - 1);
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [sec, min]);
+  return (
+    <div
+      className={['timer', +min > 1 ? 'timer--green' : 'timer--red'].join(' ')}
+    >
+      {min}:{sec}
+    </div>
+  );
+}
 function App() {
   const [questionsArr, setQuestionsArr] = useState(
     new Array(defaultArr.length).fill('').map((_, i) => i)
@@ -59,6 +95,8 @@ function App() {
       <div className="question-area">
         <h1>{defaultArr[current]}</h1>
       </div>
+      <Timer question={current} />
+
       <button onClick={next}>Next</button>
     </div>
   );
