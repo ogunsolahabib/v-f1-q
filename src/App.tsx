@@ -17,6 +17,7 @@ const defaultArr = [
   'What would you be doing after your program?',
 ];
 
+const formatSec=(val:number)=>+val <10? `0${val}`: val
 
 function Timer({ question }: { question: number }) {
   const [min, setMin] = useState(1);
@@ -49,7 +50,7 @@ function Timer({ question }: { question: number }) {
     <div
       className={['timer', +sec > 20 ? 'timer--green' : 'timer--red'].join(' ')}
     >
-      {min}:{sec}
+      {min}:{formatSec(sec)}
     </div>
   );
 }
