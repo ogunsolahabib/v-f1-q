@@ -2,19 +2,10 @@ import { useEffect, useState } from 'react';
 
 
 const defaultArr = [
-  // 'Why you chose US for Masters and not UK',
-  // 'Why you chose Lamar University?',
-  // 'How did you find the school',
-  // 'What is Computational Mathematics? Machine Learning ',
-  // 'Why Computational Maths? What will it do for you? Tell me about your interest in CS Maths?',
-  // 'What courses/modules would you be offering? What’s your project topic?',
-  // 'Tell me about your Graduate Assistantship position',
-  // 'How many other schools did you apply to? Why this school over others?',
-  // 'What have you been doing since graduation',
-  // 'Who’s paying your deficit and what does he do',
-  // 'Where do you work',
-  // 'How big is your company?',
-  // 'What would you be doing after your program?',
+'What is Computational Mathematics? Machine Learning ',
+'How many other schools did you apply to? Why this school over others?',
+'What have you been doing since graduation',
+'Where do you work',
 "Why did you choose Lamar University for your MSc in Computational and Applied Mathematics?",
 "How did you hear about Lamar University?",
 "Why are you interested in studying Computational and Applied Mathematics?",
@@ -22,7 +13,6 @@ const defaultArr = [
 "How do you plan to apply your degree after graduation?",
 "Can you explain your current job responsibilities in the UK?",
 "How long have you been living and working in the UK?",
-"What are your plans after completing your degree in the USA?",
 "How will you manage the remaining expenses that are not covered by your GA position and tuition waiver?",
 "Can you tell me more about your Graduate Assistant position and the duties involved?",
 "How do you plan to handle the cultural differences between the UK and the USA?",
@@ -34,7 +24,23 @@ const defaultArr = [
 "Do you have any family or relatives in the USA?",
 "What kind of research or projects do you plan to undertake during your MSc program?",
 "How do you think your education in the USA will benefit your home country, Nigeria?",
-"How do you plan to cope with the academic challenges in a new educational system?"
+"How do you plan to cope with the academic challenges in a new educational system?",
+"Tell us about your academic background and what motivated you to pursue a Master's degree in Computational and Applied Mathematics at Lamar University?",
+"Why did you choose Lamar University for this specific program? What aspects of the program align with your academic goals?",
+"Can you describe some coursework you've taken that prepared you for the rigors of this Master's program?",
+"According to your I-20, the estimated cost of attendance is $28,346. How will you finance your studies?",
+"You mentioned having a Graduate Assistantship (GA) position that covers $13,000. Can you elaborate on the responsibilities of this position and how it relates to your field of study?",
+"Do you have any additional sources of financial support to cover the remaining program costs? (Scholarships, personal savings, etc.)",
+"What are your career aspirations after completing this Master's program? How will this degree help you achieve your goals?",
+"Do you plan to return to Nigeria after graduation, or do you have any interest in pursuing employment opportunities in the US? 1 (Considering your current location in UK): How does studying in the US compare to the options available in the UK for your field?",
+"Are you familiar with the faculty members at Lamar University who specialize in your area of interest?",
+"How do you plan to contribute to the academic and social life at Lamar University?",
+"What are your long-term career goals after completing your MSc in Computational and Applied Mathematics? How will this degree program help you achieve those goals?",
+"Tell me about your academic background and why you chose this specific field of study.",
+"What are your academic goals for this program? How will this degree help you achieve your long-term career aspirations?",
+"How will your studies at Lamar University contribute to your professional development and your home country (Nigeria)?",
+"You currently reside and work in the UK. Can you explain the reason for pursuing studies in the US while residing there?",
+
 ];
 
 const formatSec=(val:number)=>+val <10? `0${val}`: val
